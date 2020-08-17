@@ -1,0 +1,9 @@
+
+
+extend type Mutation {
+    createReviewWithRenamedInputType(input: SaveReviewInput!): CreateReviewPayload!
+        @delegate(
+          path: "createReview(input:$arguments:input)"
+          schema: "StarWars"
+        )
+}
